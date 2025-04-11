@@ -8,7 +8,7 @@ html {
   --primary-color: #ffd700;
   --secondary-color:#2a7d4c ;
   --font-color:#333333;
-  --background-color: #f8f8f0;
+  --background-color: #ffffff;
 }
 
 *{
@@ -27,8 +27,6 @@ body{
 
 }
 .header{
-  /* border: 2px solid black; */
-  /* margin-top: 2rem; */
   position: fixed;
   z-index: 1000;
   top: 10px;
@@ -52,7 +50,7 @@ body{
 }
 .logo{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 10px;
   background-color: #2a7d4c;
@@ -60,6 +58,7 @@ body{
   font-weight: 500;
   border-radius: 20px;
 }
+
 #contact{
   /* border: 2px solid black; */
   color: var(--secondary-color);
@@ -155,11 +154,28 @@ body{
 }
 .imrishi{
   font-size:2rem ;
+  display: flex;
+  gap: 1rem;
 }
 .highlight{
+  display: flex;
   font-size: 2rem;
   color: #efce18;
   text-decoration: underline;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid black;
+  width: 0px;
+  animation: typing 5s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 60%; }
+  100% { width: 0; }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(0, 0, 0); }
 }
 .frontend{
   font-size: 2.5rem;
@@ -317,6 +333,13 @@ body{
   transform: scale(1.105);
 }
 #projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+
+}
+.project-area{
   background-color: #2a7d4c;
   display: flex;
   flex-direction: column;
@@ -324,7 +347,7 @@ body{
   align-items: center;
   width: 100rem;
   padding: 3rem;
-  border-radius: 18rem;
+  border-radius: 8rem;
   margin: 8rem 0;
   box-shadow: 5px 5px 8px 1px rgb(107, 120, 114), -5px -5px 8px rgb(107, 120, 114);
 }
@@ -396,8 +419,81 @@ body{
 .project-btn:hover {
   background-color: #45a049;
 }
+#contact-sec{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5rem;
+  background-color: #001F3F;
+  /* border: 2px solid black; */
+}
+.contact-txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 500;
+  color: white;
 
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
 
+.contact-form input, .contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-form button {
+  background-color: #efce18;
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#social-icons{
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* border: 2px solid black; */
+}
+.socials-txt{
+  color: #ffffff;
+  font-size: 2rem;
+  /* border: 2px solid black; */
+
+}
+#about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 11rem 0;
+  background-color: #efeded  ;
+}
+.abt-txt{
+  font-size: 5rem;
+}
+.abt-para{
+  max-width: 80rem;
+  font-size: 2rem;
+  margin:4rem ;
+  text-align: justify;
+}
 
 
 
